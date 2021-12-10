@@ -270,7 +270,7 @@ if "Klaus" in noten:
 if 2 in noten.values():
     print("x")
 '''
-
+'''
 Namen=[]
 Noten=[]
 start = True
@@ -288,4 +288,69 @@ print(Notendict)
 
 for note in Notendict.items():
     print(f"{note[0]} hat eine {note[1]}")
-    
+'''
+
+'''
+mein_String = "Kläuschen"
+string2 = "Einen Langen und noch \v längeren Text schreiben " #Man kan hierbei über mehrere Zeilen schreiben
+print(mein_String)
+print(string2)
+
+wort = mein_String[3:5]
+print(wort)
+
+if "Peter" in mein_String:
+    print("Klaus ist da")
+else:
+    print("Peter ist nicht da")
+'''
+'''
+mein_String = 'Kuchen, Kekse, Muffin'
+liste = mein_String.split(" ")
+s=""
+for i in range(len(liste)-1,-1,-1):
+    s+= liste[i]+" "
+print(s)
+'''
+'''
+mein_String = "Hallo Klaus und Klaus"
+
+a  = mein_String.find("Klaus", 10, 21)
+b = mein_String.count("Klaus")
+
+string2 = mein_String.replace("Klaus", "Rudi")
+string3 = mein_String.strip()
+string4 = mein_String.isalnum()
+print(string4)
+'''
+'''
+liste = ["Julia", "Claudia", "Nadine"]
+a= " und ".join(liste)
+
+print(a)
+'''
+'''
+a = 5
+b = 10
+print(f"a hat den Wert {a}, b hat den Wert {b}")
+
+print("a hat den Wert {}, b hat den Wert {}".format(a, b))
+print("a hat den Wert {x}, b hat den Wert {y}".format(x = a, y = b))
+
+'''
+
+
+
+Mail = input("Email: ")
+if "@" in Mail:
+    if Mail.count("@") == 1:
+        Domain = Mail.split("@")
+        print(Domain)
+        if "." in Domain[1] and Domain[0] != "" and Domain[1] != ".":
+            print("Email gültig")
+        else: 
+            print("Email ungültig, Domain fehlt, oder Name fehlt")
+    else:
+        print("Ungültig, zu viele @")
+else:
+    print("Email ungültig, @ fehlt!")
