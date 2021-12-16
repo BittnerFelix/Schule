@@ -339,7 +339,7 @@ print("a hat den Wert {x}, b hat den Wert {y}".format(x = a, y = b))
 
 '''
 
-
+'''
 
 Mail = input("Email: ")
 if "@" in Mail:
@@ -354,3 +354,81 @@ if "@" in Mail:
         print("Ungültig, zu viele @")
 else:
     print("Email ungültig, @ fehlt!")
+    '''
+''' 
+def summe(x, y):
+    z = x+y
+    print(f"Summe: {z}")
+    
+a = int(input("Zahl 1: "))
+b = int(input("Zahl 2: "))
+
+summe(a, b)
+'''
+'''
+def summe(x, y):
+    z = x+y
+    return z
+
+a = int(input("Zahl 1: "))
+b = int(input("Zahl 2: "))
+
+c = summe(a, b)
+
+print(c)
+'''
+'''
+def maxi(x, y):
+    if x > y:
+        Maximum = x
+    else:
+        Maximum = y
+    return Maximum
+
+def min(x, y):
+    if x < y:
+        Minimum = x
+    else:
+        Minimum = y
+    return Minimum
+
+a = int(input("Zahl 1: "))
+b = int(input("Zahl 2: "))
+
+Maximun = maxi(a, b)
+Minimum = min(a, b)
+
+print(f"Maximum: {Maximun}")
+print(f"Minimum: {Minimum}")
+
+'''
+# Ganz großes Fragezeichen
+'''
+def max_min(x, y):
+    ma = x if x > y else y
+    mi = x if x < y else y
+
+a = int(input("Zahl 1: "))
+b = int(input("Zahl 2: "))
+
+maximum, minimum = max_min(a, b)
+
+print(maximum)
+print(minimum)
+'''
+'''
+
+def summe(Werte):
+    temp = 0
+    for i in Werte:
+        temp += i
+    return temp
+
+tup = (6,9,7,6,4,5,1)
+print(summe(tup))
+'''
+def drucke_noten(**werte):
+    for name, note in werte.items():
+        print(f"{name}: {note}")
+
+drucke_noten(Klaus = 4.0, Lisa = 2.3)
