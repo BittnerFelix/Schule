@@ -427,8 +427,28 @@ def summe(Werte):
 tup = (6,9,7,6,4,5,1)
 print(summe(tup))
 '''
+'''
 def drucke_noten(**werte):
     for name, note in werte.items():
         print(f"{name}: {note}")
 
 drucke_noten(Klaus = 4.0, Lisa = 2.3)
+'''
+'''
+
+from math import *
+
+print(sin(9))
+
+''' 
+
+'''
+def hallo():
+    print("Hallo")
+    
+hallo()
+'''
+
+import Test_Mod
+
+print(Test_Mod.x)
