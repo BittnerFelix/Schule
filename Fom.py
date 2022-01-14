@@ -448,7 +448,57 @@ def hallo():
     
 hallo()
 '''
-
+'''
 import Test_Mod
 
 print(Test_Mod.x)
+'''
+
+# Aufgabenblatt 8 Nummer:3
+'''
+list=[]
+a = int(0)
+c = int(0)
+
+def maxi():
+    b = None
+    for a in list:
+        if b is None or a > b:
+            b = a
+    return b
+
+def min():
+    d = None
+    for c in list:
+        if d is None or c < d:
+            d = c
+    return d
+
+n=int(input("Wie viele Zahlen?: "))
+for i in range(n):
+    temp = input(f"Zahl {i+1} :")
+    list.append(temp)
+
+Maximun = maxi()
+Minimum = min()
+
+
+print(f"Maximum: {Maximun}")
+print(f"Minimum: {Minimum} ")
+
+
+'''
+try:
+    eingabe = int(input("Ganze Zahl eingeben: "))
+    print(2 / eingabe)
+except ValueError:
+    print("Das war keine ganze Zahl")
+except ZeroDivisionError:
+    print("Teilen mit null nicht möglich")
+except:
+    print("Ein unbekannter Fehler ist aufgetreten")
+
+finally:
+    print("Das wird immer ausgeführt")
+
+
