@@ -476,8 +476,8 @@ def min():
 
 n=int(input("Wie viele Zahlen?: "))
 for i in range(n):
-    temp = input(f"Zahl {i+1} :")
-    list.append(temp)
+    temp = int(input(f"Zahl {i+1} :"))
+    list.append(int(temp))
 
 Maximun = maxi()
 Minimum = min()
@@ -485,6 +485,8 @@ Minimum = min()
 
 print(f"Maximum: {Maximun}")
 print(f"Minimum: {Minimum} ")
+
+'''
 
 
 '''
@@ -501,4 +503,17 @@ except:
 finally:
     print("Das wird immer ausgeführt")
 
+'''
 
+try:
+    dateiname = input("Dateiname: ")
+    datei = open(dateiname, "r")
+    for line in datei:
+        print(line)
+
+except FileNotFoundError:
+    print("Datei nicht vorhanden")
+
+except:
+    print("Ein unbekannter Fehler ist aufgetreten vielleicht eine Falsche Dateiendung?")
+    
