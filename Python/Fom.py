@@ -48,8 +48,8 @@ print(type(a))
 a = a/3
 print(a)
 print(type(a))
-
-
+'''
+'''
 a = 100
 print(a)
 print(f"Binär: {a:b}")
@@ -61,7 +61,8 @@ c = 0o2471
 print(c)
 print(f"Oktal: {a:o}")
 
-
+'''
+'''
 a=12
 b=12
 if type(b) == type(a):
@@ -83,11 +84,11 @@ e= c & d
 print("Ergebnis: ", e)
 print("Binär: {:b}".format(e))
 '''
+'''
 
 
 
-
-
+'''
 
 
 
@@ -504,7 +505,7 @@ finally:
     print("Das wird immer ausgeführt")
 
 '''
-
+'''
 try:
     dateiname = input("Dateiname: ")
     datei = open(dateiname, "r")
@@ -517,3 +518,38 @@ except FileNotFoundError:
 except:
     print("Ein unbekannter Fehler ist aufgetreten vielleicht eine Falsche Dateiendung?")
     
+    '''
+'''  
+def meinefunktion(*a):
+    summe = 0
+    for i in a:
+        summe = summe + i
+    return summe
+
+print(meinefunktion(3,4,5,8,1))
+'''
+'''
+wert = 5
+
+quadrat = lambda x: x*x
+
+print(quadrat(wert))
+'''
+
+#Bubblesort
+
+def bubblesort(elements):
+  # Looping from size of array from last index[-1] to index [0]
+  for n in range(len(elements)-1, 0, -1):
+    for i in range(n):
+      if elements[i] > elements[i + 1]:
+        # swapping data if the element is less than next element in the array
+        elements[i], elements[i + 1] = elements[i + 1], elements[i]
+
+elements = [39,12,18,85,72,10,2,18]
+  
+print("Unsorted list is,") 
+print( elements)
+bubblesort(elements)
+print("Sorted Array is, ")
+print(elements)
